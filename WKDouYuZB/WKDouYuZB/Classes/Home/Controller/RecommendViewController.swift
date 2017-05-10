@@ -27,10 +27,10 @@ class RecommendViewController: UIViewController {
         layout.headerReferenceSize = CGSize(width:kScreenW,height:kHeaderViewH);
         layout.sectionInset = UIEdgeInsets(top:0, left:kItemMargin, bottom:0, right:kItemMargin);
         let collectionView = UICollectionView(frame:self.view.bounds,collectionViewLayout:layout);
-        collectionView.backgroundColor = UIColor.brown;
+        collectionView.backgroundColor = UIColor.white;
         collectionView.dataSource = self;
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID);
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID);
+        collectionView.register(UINib(nibName: "CollectionViewNormalCell",bundle:nil), forCellWithReuseIdentifier: kNormalCellID);
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID);
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth];
 
         return collectionView;
@@ -69,13 +69,11 @@ extension RecommendViewController:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath);
-        cell.backgroundColor = UIColor.cyan;
         return cell;
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID, for: indexPath);
-        headerView.backgroundColor = UIColor.green;
         return headerView;
     }
 }

@@ -101,7 +101,7 @@ extension PageTitleView{
     private func setupBottomMenuAndScrollLine(){
         //添加底线
         let bottomLine = UIView();
-        bottomLine.backgroundColor = UIColor.lightGray;
+        bottomLine.backgroundColor = UIColor(r: 224, g: 224, b: 224);
         let lineH : CGFloat = 0.5;
         bottomLine.frame = CGRect(x: 0, y: frame.height-lineH, width: frame.width, height: lineH);
         addSubview(bottomLine);

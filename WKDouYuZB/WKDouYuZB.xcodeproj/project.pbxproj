@@ -21,6 +21,8 @@
 		837EE65D1EC3095000775A5B /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE65C1EC3095000775A5B /* RecommendViewController.swift */; };
 		837EE6601EC3182900775A5B /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE65E1EC3182900775A5B /* CollectionHeaderView.swift */; };
 		837EE6611EC3182900775A5B /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837EE65F1EC3182900775A5B /* CollectionHeaderView.xib */; };
+		837EE6641EC31CD100775A5B /* CollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE6621EC31CD100775A5B /* CollectionViewNormalCell.swift */; };
+		837EE6651EC31CD100775A5B /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837EE6631EC31CD100775A5B /* CollectionViewNormalCell.xib */; };
 		83D1603B1EC1C054009D22DD /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603A1EC1C054009D22DD /* PageTitleView.swift */; };
 		83D1603D1EC1C364009D22DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603C1EC1C364009D22DD /* Common.swift */; };
 		83D1603F1EC1D178009D22DD /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603E1EC1D178009D22DD /* PageContentView.swift */; };
@@ -44,6 +46,8 @@
 		837EE65C1EC3095000775A5B /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		837EE65E1EC3182900775A5B /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		837EE65F1EC3182900775A5B /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		837EE6621EC31CD100775A5B /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
+		837EE6631EC31CD100775A5B /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		83D1603A1EC1C054009D22DD /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		83D1603C1EC1C364009D22DD /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		83D1603E1EC1D178009D22DD /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			children = (
 				83D1603A1EC1C054009D22DD /* PageTitleView.swift */,
 				83D1603E1EC1D178009D22DD /* PageContentView.swift */,
+				837EE6621EC31CD100775A5B /* CollectionViewNormalCell.swift */,
+				837EE6631EC31CD100775A5B /* CollectionViewNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				8356F8C41EC1A70700C55163 /* Home.storyboard in Resources */,
 				8356F87C1EC169E700C55163 /* LaunchScreen.storyboard in Resources */,
 				8356F8791EC169E700C55163 /* Assets.xcassets in Resources */,
+				837EE6651EC31CD100775A5B /* CollectionViewNormalCell.xib in Resources */,
 				8356F8B71EC199CD00C55163 /* Profile.storyboard in Resources */,
 				8356F8BD1EC199F500C55163 /* Follow.storyboard in Resources */,
 				8356F8B91EC199E000C55163 /* Live.storyboard in Resources */,
@@ -299,6 +306,7 @@
 				83D160411EC1D501009D22DD /* UIColor-Extension.swift in Sources */,
 				837EE65D1EC3095000775A5B /* RecommendViewController.swift in Sources */,
 				8356F8CB1EC1A73000C55163 /* MainViewController.swift in Sources */,
+				837EE6641EC31CD100775A5B /* CollectionViewNormalCell.swift in Sources */,
 				83D1603B1EC1C054009D22DD /* PageTitleView.swift in Sources */,
 				83D1603F1EC1D178009D22DD /* PageContentView.swift in Sources */,
 				8356F8D21EC1B51700C55163 /* UIBarButtonItem-Extension.swift in Sources */,
