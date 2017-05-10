@@ -18,6 +18,9 @@
 		8356F8CB1EC1A73000C55163 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8C71EC1A73000C55163 /* MainViewController.swift */; };
 		8356F8CD1EC1A7AA00C55163 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8CC1EC1A7AA00C55163 /* HomeViewController.swift */; };
 		8356F8D21EC1B51700C55163 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8D11EC1B51700C55163 /* UIBarButtonItem-Extension.swift */; };
+		837EE65D1EC3095000775A5B /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE65C1EC3095000775A5B /* RecommendViewController.swift */; };
+		837EE6601EC3182900775A5B /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE65E1EC3182900775A5B /* CollectionHeaderView.swift */; };
+		837EE6611EC3182900775A5B /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837EE65F1EC3182900775A5B /* CollectionHeaderView.xib */; };
 		83D1603B1EC1C054009D22DD /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603A1EC1C054009D22DD /* PageTitleView.swift */; };
 		83D1603D1EC1C364009D22DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603C1EC1C364009D22DD /* Common.swift */; };
 		83D1603F1EC1D178009D22DD /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603E1EC1D178009D22DD /* PageContentView.swift */; };
@@ -38,6 +41,9 @@
 		8356F8C71EC1A73000C55163 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8356F8CC1EC1A7AA00C55163 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8356F8D11EC1B51700C55163 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		837EE65C1EC3095000775A5B /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		837EE65E1EC3182900775A5B /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		837EE65F1EC3182900775A5B /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		83D1603A1EC1C054009D22DD /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		83D1603C1EC1C364009D22DD /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		83D1603E1EC1D178009D22DD /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 			children = (
 				8356F8C11EC1A70700C55163 /* Home.storyboard */,
 				8356F8CC1EC1A7AA00C55163 /* HomeViewController.swift */,
+				837EE65C1EC3095000775A5B /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +175,8 @@
 		8356F8C31EC1A70700C55163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				837EE65E1EC3182900775A5B /* CollectionHeaderView.swift */,
+				837EE65F1EC3182900775A5B /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8356F8CA1EC1A73000C55163 /* Main.storyboard in Resources */,
+				837EE6611EC3182900775A5B /* CollectionHeaderView.xib in Resources */,
 				8356F8C41EC1A70700C55163 /* Home.storyboard in Resources */,
 				8356F87C1EC169E700C55163 /* LaunchScreen.storyboard in Resources */,
 				8356F8791EC169E700C55163 /* Assets.xcassets in Resources */,
@@ -285,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8356F8AC1EC192E100C55163 /* AppDelegate.swift in Sources */,
+				837EE6601EC3182900775A5B /* CollectionHeaderView.swift in Sources */,
 				83D160411EC1D501009D22DD /* UIColor-Extension.swift in Sources */,
+				837EE65D1EC3095000775A5B /* RecommendViewController.swift in Sources */,
 				8356F8CB1EC1A73000C55163 /* MainViewController.swift in Sources */,
 				83D1603B1EC1C054009D22DD /* PageTitleView.swift in Sources */,
 				83D1603F1EC1D178009D22DD /* PageContentView.swift in Sources */,
