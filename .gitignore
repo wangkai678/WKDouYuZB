@@ -17,16 +17,24 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
+#CocoaPods
+profile
+Pods
+*.xcworkspace
+
 ## Other
 *.moved-aside
 *.xcuserstate
+.idea/
+*.xccheckout
+!default.xcworkspace
+*.DS_Store
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
 *.dSYM.zip
 *.dSYM
-*.DS_Store
 
 ## Playgrounds
 timeline.xctimeline
