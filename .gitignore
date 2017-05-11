@@ -18,7 +18,6 @@ DerivedData/
 xcuserdata/
 
 #CocoaPods
-profile
 Pods
 *.xcworkspace
 
@@ -29,6 +28,7 @@ Pods
 *.xccheckout
 !default.xcworkspace
 *.DS_Store
+profile
 
 ## Obj-C/Swift specific
 *.hmap
