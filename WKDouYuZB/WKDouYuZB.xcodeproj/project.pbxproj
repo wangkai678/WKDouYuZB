@@ -29,9 +29,12 @@
 		83D1603D1EC1C364009D22DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603C1EC1C364009D22DD /* Common.swift */; };
 		83D1603F1EC1D178009D22DD /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1603E1EC1D178009D22DD /* PageContentView.swift */; };
 		83D160411EC1D501009D22DD /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D160401EC1D501009D22DD /* UIColor-Extension.swift */; };
+		EDC3814A1AD66DADE720FA12 /* Pods_WKDouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBC8DA4469C458E68C8B5EB /* Pods_WKDouYuZB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E603CC03EE6B4A3F9B0B63E /* Pods-WKDouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKDouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKDouYuZB/Pods-WKDouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
+		6BBC8DA4469C458E68C8B5EB /* Pods_WKDouYuZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKDouYuZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8356F86E1EC169E700C55163 /* WKDouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKDouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8356F8781EC169E700C55163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8356F87B1EC169E700C55163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		83D1603C1EC1C364009D22DD /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		83D1603E1EC1D178009D22DD /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		83D160401EC1D501009D22DD /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		CC6EA936A784D05DD4BE7B69 /* Pods-WKDouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKDouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKDouYuZB/Pods-WKDouYuZB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +67,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC3814A1AD66DADE720FA12 /* Pods_WKDouYuZB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2178B8DC73A9BC36677BB47B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E603CC03EE6B4A3F9B0B63E /* Pods-WKDouYuZB.debug.xcconfig */,
+				CC6EA936A784D05DD4BE7B69 /* Pods-WKDouYuZB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		65B81EFF6E3C00B4F60592BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BBC8DA4469C458E68C8B5EB /* Pods_WKDouYuZB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8356F8651EC169E700C55163 = {
 			isa = PBXGroup;
 			children = (
 				8356F8701EC169E700C55163 /* WKDouYuZB */,
 				8356F86F1EC169E700C55163 /* Products */,
+				2178B8DC73A9BC36677BB47B /* Pods */,
+				65B81EFF6E3C00B4F60592BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8356F8801EC169E700C55163 /* Build configuration list for PBXNativeTarget "WKDouYuZB" */;
 			buildPhases = (
+				5920FCC57C097BFA90BF4444 /* [CP] Check Pods Manifest.lock */,
 				8356F86A1EC169E700C55163 /* Sources */,
 				8356F86B1EC169E700C55163 /* Frameworks */,
 				8356F86C1EC169E700C55163 /* Resources */,
+				BEB5C00237F3487A47FC5E12 /* [CP] Embed Pods Frameworks */,
+				346079FA7963196513CBF23C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,6 +329,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		346079FA7963196513CBF23C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKDouYuZB/Pods-WKDouYuZB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5920FCC57C097BFA90BF4444 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEB5C00237F3487A47FC5E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKDouYuZB/Pods-WKDouYuZB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8356F86A1EC169E700C55163 /* Sources */ = {
@@ -430,6 +505,7 @@
 		};
 		8356F8811EC169E700C55163 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E603CC03EE6B4A3F9B0B63E /* Pods-WKDouYuZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -448,6 +524,7 @@
 		};
 		8356F8821EC169E700C55163 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC6EA936A784D05DD4BE7B69 /* Pods-WKDouYuZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
