@@ -5,6 +5,6 @@ use_frameworks!
 
 target 'WKDouYuZB' do
 
-
+pod 'Alamofire' '~> 4.4.0’
 
 end
