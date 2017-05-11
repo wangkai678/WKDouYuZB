@@ -45,6 +45,10 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI();
+        
+        NetworkTools.requestData(type: .GET, URLString: "http://static.deruimu.com/sources/cms/1493176163536506086.jpg") { (response) in
+            print(response);
+        }
     }
 }
 
