@@ -21,6 +21,7 @@ private let kHeaderViewID : String = "kHeaderViewID";
 class RecommendViewController: UIViewController {
     
     //MARK: - 懒加载属性
+    fileprivate lazy var recommendVM : RecommendViewModel = RecommendViewModel();
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout();
 //        layout.itemSize = CGSize(width:kItemW,height:kNormalItemH);
@@ -46,9 +47,8 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
         setupUI();
         
-        NetworkTools.requestData(type: .GET, URLString: "http://static.deruimu.com/sources/cms/1493176163536506086.jpg") { (response) in
-            print(response);
-        }
+        //发送网络请求
+        loadData();
     }
 }
 
@@ -56,6 +56,13 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController {
     fileprivate func setupUI(){
         view.addSubview(collectionView);
+    }
+}
+
+//MARK: - 请求数据
+extension RecommendViewController{
+    fileprivate func loadData(){
+        recommendVM.requestData();
     }
 }
 
