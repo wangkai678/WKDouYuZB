@@ -62,35 +62,41 @@ extension RecommendViewController {
 //MARK: - 请求数据
 extension RecommendViewController{
     fileprivate func loadData(){
-        recommendVM.requestData();
+        recommendVM.requestData { 
+            self.collectionView.reloadData();
+        }
     }
 }
 
 //MARK: - 遵守UICollectionViewDataSource
 extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12;
+        return recommendVM.anchorGroups.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8;
-        }
-        return 4;
+        let group = recommendVM.anchorGroups[section];
+        return group.anchors.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell : UICollectionViewCell;
+         let group = recommendVM.anchorGroups[indexPath.section];
+        let anchor = group.anchors[indexPath.item];
+        
         if indexPath.section == 1{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPerttyCellID, for: indexPath);
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPerttyCellID, for: indexPath) as! CollectionPrettyCell;
+            cell.anchor = anchor
+            return cell;
         }else{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath);
+             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionViewNormalCell;
+            cell.anchor = anchor
+            return cell;
         }
-        return cell;
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID, for: indexPath);
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView;
+        headerView.group = recommendVM.anchorGroups[indexPath.section];
         return headerView;
     }
     
