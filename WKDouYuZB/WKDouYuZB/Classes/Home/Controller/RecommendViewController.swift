@@ -14,6 +14,8 @@ private let kNormalItemH : CGFloat = kItemW * 3 / 4;
 private let kPrettyItemH : CGFloat = kItemW * 4 / 3;
 private let kHeaderViewH : CGFloat = 50;
 
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8;
+
 private let kNormalCellID : String = "kNormalCellID";
 private let kPerttyCellID : String = "kPerttyCellID";
 private let kHeaderViewID : String = "kHeaderViewID";
@@ -37,12 +39,17 @@ class RecommendViewController: UIViewController {
         collectionView.register(UINib(nibName: "CollectionPrettyCell",bundle:nil), forCellWithReuseIdentifier: kPerttyCellID);
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID);
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth];
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH, 0, 0, 0);
         return collectionView;
     }()
     
+    fileprivate lazy var cycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.recommendCycleView();
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH);
+        return cycleView;
+    }()
+    
     //MARK: - 系统回调函数
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI();
@@ -56,14 +63,20 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController {
     fileprivate func setupUI(){
         view.addSubview(collectionView);
+        collectionView.addSubview(cycleView);
     }
 }
 
 //MARK: - 请求数据
 extension RecommendViewController{
     fileprivate func loadData(){
+        //请求推荐数据
         recommendVM.requestData { 
             self.collectionView.reloadData();
+        }
+        //请求轮播数据
+        recommendVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommendVM.cysleModels;
         }
     }
 }

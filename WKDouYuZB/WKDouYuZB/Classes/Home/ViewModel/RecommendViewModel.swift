@@ -10,6 +10,7 @@ import UIKit
 
 class RecommendViewModel {
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]();
+    lazy var cysleModels : [CycleModel] = [CycleModel]();
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup();
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup();
 
@@ -17,8 +18,8 @@ class RecommendViewModel {
 
 // MARK:-发送网络请求
 extension RecommendViewModel{
+    //请求推荐数据
     func requestData(finishCallback : @escaping () -> ()){
-        print("bbbb");
         //0.定义参数
         let parameters = ["limit":"4","offset":"0","time":NSDate.getCurrentTime()];
         
@@ -69,6 +70,18 @@ extension RecommendViewModel{
         dispatchGroup.notify(queue: DispatchQueue.main) {
             self.anchorGroups.insert(self.prettyGroup, at: 0);
             self.anchorGroups.insert(self.bigDataGroup, at: 0);
+            finishCallback();
+        }
+    }
+    //请求无限轮播数据
+    func requestCycleData(finishCallback : @escaping () -> ()){
+        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+            guard let resultDict = result as? [String : NSObject] else {return};
+            guard let dataArray =  resultDict["data"] as? [[String : NSObject]] else{return}
+            for dict in dataArray{
+                
+                self.cysleModels.append(CycleModel(dict: dict));
+            }
             finishCallback();
         }
     }
