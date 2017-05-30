@@ -12,6 +12,7 @@ private let kEdgeMargin : CGFloat = 10
 private let KitemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
 private let kItemH : CGFloat = KitemW * 6 / 5
 private let kHeaderViewH : CGFloat = 50
+private let kGameViewH : CGFloat = 90;
 
 private let kGameCellID = "kGameCellID"
 private let kHeaderViewID = "kHeaderViewID"
@@ -19,6 +20,22 @@ private let kHeaderViewID = "kHeaderViewID"
 class GameViewController: UIViewController {
     
     fileprivate lazy var gameVM : GameViewModel = GameViewModel();
+    fileprivate lazy var topHeaderView : CollectionHeaderView = {
+        let headerView = CollectionHeaderView.collectionHeaderView();
+        headerView.frame = CGRect(x: 0, y: -(kHeaderViewH+kGameViewH), width: kScreenW, height: kHeaderViewH)
+        headerView.iconImageView.image = UIImage(named: "Img_orange")
+      headerView.titleLabel.text = "常见";
+        headerView.moreBtn.isHidden = true
+        return headerView
+    }()
+    
+    fileprivate lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
+    
+    
     //MARK:懒加载属性
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -34,7 +51,6 @@ class GameViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth];
         collectionView.backgroundColor = UIColor.white
         return collectionView;
-        
     }()
 
     override func viewDidLoad() {
@@ -48,6 +64,9 @@ class GameViewController: UIViewController {
 extension GameViewController{
     fileprivate func setupUI(){
         view.addSubview(collectionView)
+        collectionView.addSubview(topHeaderView)
+        collectionView.addSubview(gameView)
+        collectionView.contentInset = UIEdgeInsetsMake(kHeaderViewH+kGameViewH, 0, 0, 0)
     }
 }
 
@@ -56,6 +75,7 @@ extension GameViewController{
     fileprivate func loadData(){
         gameVM.loadAllGameData { 
             self.collectionView.reloadData()
+            self.gameView.groups = Array(self.gameVM.games[0..<10]);
         }
     }
 }
