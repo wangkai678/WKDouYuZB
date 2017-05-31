@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8321AAA81EC4B8F600242621 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321AAA71EC4B8F600242621 /* NetworkTools.swift */; };
+		834076FA1EDF15B20021AF38 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834076F91EDF15B20021AF38 /* CustomNavigationController.swift */; };
 		834471901ED3CE990028C330 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344718F1ED3CE990028C330 /* RecommendCycleView.swift */; };
 		834471921ED3CEC60028C330 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 834471911ED3CEC60028C330 /* RecommendCycleView.xib */; };
 		8349A7831EDAFE1400E9C4DB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8349A7811EDAFE1400E9C4DB /* GameViewController.swift */; };
@@ -71,6 +72,7 @@
 		15D26F67E24B96B47A8AA6D1 /* Pods-WKDouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKDouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKDouYuZB/Pods-WKDouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		41646D87601CF3E395FDEE6A /* Pods_WKDouYuZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKDouYuZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8321AAA71EC4B8F600242621 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		834076F91EDF15B20021AF38 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		8344718F1ED3CE990028C330 /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		834471911ED3CEC60028C330 /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		8349A7811EDAFE1400E9C4DB /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				8356F8C71EC1A73000C55163 /* MainViewController.swift */,
 				835A48511EDE96B200D8B8A6 /* BaseAnchorViewController.swift */,
 				835A485F1EDEC7BA00D8B8A6 /* BaseViewController.swift */,
+				834076F91EDF15B20021AF38 /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				835A485E1EDEC03E00D8B8A6 /* FunnyViewModel.swift in Sources */,
 				837172861ED1D8D000A9F37A /* RecommendViewModel.swift in Sources */,
 				8371728C1ED1E90400A9F37A /* AnchorModel.swift in Sources */,
+				834076FA1EDF15B20021AF38 /* CustomNavigationController.swift in Sources */,
 				83BA48CF1ED4121B009B7AB6 /* CollectionCycleCell.swift in Sources */,
 				835A48661EDED27500D8B8A6 /* RoomShowViewController.swift in Sources */,
 				8356F8CD1EC1A7AA00C55163 /* HomeViewController.swift in Sources */,

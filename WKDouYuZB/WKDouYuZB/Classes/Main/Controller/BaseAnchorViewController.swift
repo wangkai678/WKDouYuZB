@@ -97,10 +97,13 @@ extension BaseAnchorViewController : UICollectionViewDelegate{
     }
     
     private func presentShowRoomVc(){
-        
+        let showRoomVc = RoomShowViewController()
+        present(showRoomVc, animated: true, completion: nil)
     }
     
     private func pushNormalRoomVc(){
+        let normalRoomVc = RoomNormalViewController()
+        navigationController?.pushViewController(normalRoomVc, animated: true)
         
     }
 }
