@@ -19,7 +19,7 @@ let kNormalItemW : CGFloat = (kScreenW - 3*kItemMargin)/2;
 let kNormalItemH : CGFloat = kNormalItemW * 3 / 4;
 let kPrettyItemH : CGFloat = kNormalItemW * 4 / 3;
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
 
     var baseVM : BaseViewModel!
     
@@ -50,8 +50,10 @@ class BaseAnchorViewController: UIViewController {
 
 //MARK: - 设置UI界面
 extension BaseAnchorViewController{
-     func setupUI(){
+     override func setupUI(){
+        contentView = collectionView
         view.addSubview(collectionView)
+        super.setupUI()
     }
 }
 
