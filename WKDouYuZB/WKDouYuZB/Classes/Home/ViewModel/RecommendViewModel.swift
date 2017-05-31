@@ -8,8 +8,7 @@
 
 import UIKit
 
-class RecommendViewModel {
-    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]();
+class RecommendViewModel : BaseViewModel{
     lazy var cysleModels : [CycleModel] = [CycleModel]();
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup();
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup();
@@ -57,15 +56,10 @@ extension RecommendViewModel{
         
         //3.请求后面部分的游戏数据
         dispatchGroup.enter();
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-            guard let resultDict = result as? [String:NSObject] else { return };
-            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else {return};
-            for dict in dataArray{
-                let group = AnchorGroup(dict: dict);
-                self.anchorGroups.append(group);
-            }
-            dispatchGroup.leave();
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
+             dispatchGroup.leave();
         }
+        
         //所有数据都请求到了
         dispatchGroup.notify(queue: DispatchQueue.main) {
             self.anchorGroups.insert(self.prettyGroup, at: 0);
