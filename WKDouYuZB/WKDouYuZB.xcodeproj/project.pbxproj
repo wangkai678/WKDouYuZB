@@ -33,6 +33,8 @@
 		835A48561EDEA5C700D8B8A6 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835A48551EDEA5C700D8B8A6 /* AmuseMenuView.xib */; };
 		835A48591EDEAF0400D8B8A6 /* AmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835A48571EDEAF0400D8B8A6 /* AmuseMenuViewCell.swift */; };
 		835A485A1EDEAF0400D8B8A6 /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835A48581EDEAF0400D8B8A6 /* AmuseMenuViewCell.xib */; };
+		835A485C1EDEBCB700D8B8A6 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835A485B1EDEBCB700D8B8A6 /* FunnyViewController.swift */; };
+		835A485E1EDEC03E00D8B8A6 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835A485D1EDEC03E00D8B8A6 /* FunnyViewModel.swift */; };
 		837172831ED1D00A00A9F37A /* xuexibiji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837172821ED1D00A00A9F37A /* xuexibiji.swift */; };
 		837172861ED1D8D000A9F37A /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837172851ED1D8D000A9F37A /* RecommendViewModel.swift */; };
 		837172881ED1DF0800A9F37A /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837172871ED1DF0800A9F37A /* NSDate-Extension.swift */; };
@@ -93,6 +95,8 @@
 		835A48551EDEA5C700D8B8A6 /* AmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		835A48571EDEAF0400D8B8A6 /* AmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		835A48581EDEAF0400D8B8A6 /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		835A485B1EDEBCB700D8B8A6 /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		835A485D1EDEC03E00D8B8A6 /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		837172821ED1D00A00A9F37A /* xuexibiji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xuexibiji.swift; sourceTree = "<group>"; };
 		837172851ED1D8D000A9F37A /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		837172871ED1DF0800A9F37A /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 				8349A7811EDAFE1400E9C4DB /* GameViewController.swift */,
 				8349A7821EDAFE1400E9C4DB /* GameViewController.xib */,
 				835A484A1EDE6F1300D8B8A6 /* AmuseViewController.swift */,
+				835A485B1EDEBCB700D8B8A6 /* FunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				837172851ED1D8D000A9F37A /* RecommendViewModel.swift */,
 				837415131EDB07380086D6A9 /* GameViewModel.swift */,
 				835A484C1EDE745F00D8B8A6 /* AmuseViewModel.swift */,
+				835A485D1EDEC03E00D8B8A6 /* FunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 				8356F8AC1EC192E100C55163 /* AppDelegate.swift in Sources */,
 				835A48591EDEAF0400D8B8A6 /* AmuseMenuViewCell.swift in Sources */,
 				837EE6601EC3182900775A5B /* CollectionHeaderView.swift in Sources */,
+				835A485C1EDEBCB700D8B8A6 /* FunnyViewController.swift in Sources */,
 				83D160411EC1D501009D22DD /* UIColor-Extension.swift in Sources */,
 				837EE65D1EC3095000775A5B /* RecommendViewController.swift in Sources */,
 				837415181EDB0A940086D6A9 /* BaseGameModel.swift in Sources */,
@@ -523,6 +530,7 @@
 				835A48541EDEA5AD00D8B8A6 /* AmuseMenuView.swift in Sources */,
 				8321AAA81EC4B8F600242621 /* NetworkTools.swift in Sources */,
 				834471901ED3CE990028C330 /* RecommendCycleView.swift in Sources */,
+				835A485E1EDEC03E00D8B8A6 /* FunnyViewModel.swift in Sources */,
 				837172861ED1D8D000A9F37A /* RecommendViewModel.swift in Sources */,
 				8371728C1ED1E90400A9F37A /* AnchorModel.swift in Sources */,
 				83BA48CF1ED4121B009B7AB6 /* CollectionCycleCell.swift in Sources */,
