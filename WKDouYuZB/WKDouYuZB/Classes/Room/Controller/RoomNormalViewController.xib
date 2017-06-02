@@ -9,45 +9,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomNormalViewController" customModule="WKDouYuZB" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="qPY-qw-bXa" id="CfG-7W-qh2"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="Y52-BN-Vx2" customClass="RoomNormalViewController" customModule="WKDouYuZB" customModuleProvider="target">
-            <layoutGuides>
-                <viewControllerLayoutGuide type="top" id="LVH-sp-A3q"/>
-                <viewControllerLayoutGuide type="bottom" id="2H9-ky-Hlw"/>
-            </layoutGuides>
-            <view key="view" contentMode="scaleToFill" id="rs9-K3-eLH">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOD-d4-YNv">
-                        <rect key="frame" x="111" y="174" width="62" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="开始采集"/>
-                        <connections>
-                            <action selector="startCapture:" destination="Y52-BN-Vx2" eventType="touchUpInside" id="dch-rg-fHC"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-sh-U3M">
-                        <rect key="frame" x="216" y="174" width="62" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="停止采集"/>
-                        <connections>
-                            <action selector="stopCapture:" destination="Y52-BN-Vx2" eventType="touchUpInside" id="nYH-OK-l2X"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1F-GH-UZv">
-                        <rect key="frame" x="146" y="283" width="62" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="切换镜头"/>
-                        <connections>
-                            <action selector="switchScene:" destination="Y52-BN-Vx2" eventType="touchUpInside" id="cQL-Bh-PcJ"/>
-                        </connections>
-                    </button>
-                </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            </view>
-            <point key="canvasLocation" x="22" y="-38"/>
-        </viewController>
+        <view contentMode="scaleToFill" id="qPY-qw-bXa">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrD-F3-1Eo">
+                    <rect key="frame" x="96" y="172" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="开始采集"/>
+                    <connections>
+                        <action selector="startCapture:" destination="-1" eventType="touchUpInside" id="fQc-wd-xa0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-ce-C1F">
+                    <rect key="frame" x="204" y="172" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="停止采集"/>
+                    <connections>
+                        <action selector="stopCapture:" destination="-1" eventType="touchUpInside" id="Rox-6o-Kql"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRD-f0-qSJ">
+                    <rect key="frame" x="140" y="245" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="切换镜头"/>
+                    <connections>
+                        <action selector="switchScene:" destination="-1" eventType="touchUpInside" id="7xQ-bQ-plU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="-165" y="-330"/>
+        </view>
     </objects>
 </document>

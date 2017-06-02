@@ -21,7 +21,6 @@ class RoomNormalViewController: UIViewController,UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.orange
     }
     
     override func viewWillAppear(_ animated: Bool) {
